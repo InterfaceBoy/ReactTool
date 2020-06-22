@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component,Fragment } from "react";
 import propTypes from "prop-types";
 class test extends Component {
   constructor(props) {
@@ -9,9 +9,11 @@ class test extends Component {
 
   render() {
     return (
-      <div onClick={this.handelClick}>
-        <p>{this.props.content}</p>
-      </div>
+      <Fragment> 
+        <div onClick={this.handelClick}>
+          <p>{this.props.content}</p>
+        </div>
+    </Fragment>
     );
   }
   handelClick() {
@@ -28,4 +30,5 @@ test.defaultProps = {
   content: "美女",
   index: 0,
 };
+
 export default test;
